@@ -1,3 +1,210 @@
-Maison MOS
-Maison MOS
-Page de test — si vous voyez ce texte, le site est en ligne.
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOS – Maison Haute Parfumerie</title>
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)" />
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap)" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ANNONCE -->
+  <div class="annonce">Livraison offerte dès 59 € · Expédition 24–48 h · Paiement sécurisé</div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="nav-left">
+      <a href="index.html">Accueil</a>
+      <a href="collection.html">Collection</a>
+      <a href="decantes.html">Décantes</a>
+    </nav>
+    <a href="index.html" class="logo">MOS</a>
+    <nav class="nav-right">
+      <a href="a-propos.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <a href="panier.html" class="cart-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6l-2-3H1"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+        <span class="cart-count">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-sub">Maison Haute Parfumerie · Lyon</p>
+      <h1 class="hero-title">MOS</h1>
+      <p class="hero-tagline">L'art olfactif réinventé.</p>
+      <div class="hero-btns">
+        <a href="collection.html" class="btn-gold">Découvrir la collection</a>
+        <a href="decantes.html" class="btn-outline">Packs découverte</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS -->
+  <section class="section collections-section">
+    <h2 class="section-title">Collections</h2>
+    <div class="collections-grid">
+      <a href="collection.html?cat=niche" class="col-card">
+        <div class="col-card-img" style="background-image:url('images/col-niche.jpg')"></div>
+        <div class="col-card-body">
+          <span class="col-tag">MOS</span>
+          <h3>Collection Niche</h3>
+          <span class="col-arrow">→</span>
+        </div>
+      </a>
+      <a href="collection.html?cat=homme" class="col-card">
+        <div class="col-card-img" style="background-image:url('images/col-homme.jpg')"></div>
+        <div class="col-card-body">
+          <span class="col-tag">MOS</span>
+          <h3>Collection Homme</h3>
+          <span class="col-arrow">→</span>
+        </div>
+      </a>
+      <a href="collection.html?cat=femme" class="col-card">
+        <div class="col-card-img" style="background-image:url('images/col-femme.jpg')"></div>
+        <div class="col-card-body">
+          <span class="col-tag">MOS</span>
+          <h3>Collection Femme</h3>
+          <span class="col-arrow">→</span>
+        </div>
+      </a>
+      <a href="decantes.html" class="col-card">
+        <div class="col-card-img" style="background-image:url('images/col-decant.jpg')"></div>
+        <div class="col-card-body">
+          <span class="col-tag">MOS</span>
+          <h3>Décantes 10 ML</h3>
+          <span class="col-arrow">→</span>
+        </div>
+      </a>
+      <a href="collection.html?cat=coffrets" class="col-card">
+        <div class="col-card-img" style="background-image:url('images/col-coffret.jpg')"></div>
+        <div class="col-card-body">
+          <span class="col-tag">MOS</span>
+          <h3>Coffrets Signature</h3>
+          <span class="col-arrow">→</span>
+        </div>
+      </a>
+      <a href="collection.html?cat=extraits" class="col-card">
+        <div class="col-card-img" style="background-image:url('images/col-extrait.jpg')"></div>
+        <div class="col-card-body">
+          <span class="col-tag">MOS</span>
+          <h3>Extraits de Parfum</h3>
+          <span class="col-arrow">→</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- PRODUITS VEDETTES -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Sélection du moment</h2>
+      <a href="collection.html" class="voir-tout">Voir tout →</a>
+    </div>
+    <div class="products-grid" id="featured-grid"></div>
+  </section>
+
+  <!-- PACKS -->
+  <section class="section packs-section">
+    <h2 class="section-title">Packs découverte</h2>
+    <p class="section-sub">3 × 5 ml · 29 €</p>
+    <div class="packs-grid">
+      <div class="pack-card">
+        <div class="pack-icon">🌲</div>
+        <h3>Boisés élégants</h3>
+        <p>Sauvage · Bleu de Chanel · Terre d'Hermès</p>
+        <span class="pack-price">29 €</span>
+        <button class="btn-gold" onclick="addPack('Boisés élégants')">Ajouter au panier</button>
+      </div>
+      <div class="pack-card">
+        <div class="pack-icon">🌹</div>
+        <h3>Ambrés / Vanillés</h3>
+        <p>Herod · Naxos · Scandal</p>
+        <span class="pack-price">29 €</span>
+        <button class="btn-gold" onclick="addPack('Ambrés Vanillés')">Ajouter au panier</button>
+      </div>
+      <div class="pack-card">
+        <div class="pack-icon">🍋</div>
+        <h3>Frais hespéridés</h3>
+        <p>Acqua di Giò · Invictus · Light Blue</p>
+        <span class="pack-price">29 €</span>
+        <button class="btn-gold" onclick="addPack('Frais hespéridés')">Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI MOS -->
+  <section class="section why-section">
+    <h2 class="section-title">Pourquoi MOS</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">✦</div>
+        <h4>Flacons officiels</h4>
+        <p>Chaque décant est réalisé à partir de flacons achetés au détail. Authenticité garantie.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">✦</div>
+        <h4>Verrerie stérile</h4>
+        <p>Seringues à usage unique, verrerie stérilisée, gants — protocole hygiène strict à chaque décantage.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">✦</div>
+        <h4>Traçabilité des lots</h4>
+        <p>Numéro de lot conservé pour chaque référence. Vous savez exactement ce que vous recevez.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">✦</div>
+        <h4>Expédition depuis Lyon</h4>
+        <p>Expédition 24–48 h en France. Emballage soigné, colis sécurisé.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">MOS</div>
+        <p>Maison Haute Parfumerie · Lyon</p>
+        <p style="font-size:11px;opacity:0.5;margin-top:8px">Décants réalisés à partir de flacons officiels.<br>MOS n'est pas affilié aux marques citées.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Navigation</h5>
+        <a href="collection.html">Collection</a>
+        <a href="decantes.html">Décantes</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h5>Légal</h5>
+        <a href="#">CGV</a>
+        <a href="#">Mentions légales</a>
+        <a href="#">Confidentialité</a>
+        <a href="#">Retours</a>
+      </div>
+      <div class="footer-links">
+        <h5>Contact</h5>
+        <a href="mailto:contact@maison-mos.fr">contact@maison-mos.fr</a>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 MOS – Maison Haute Parfumerie · Lyon</p>
+      <div class="payment-icons">
+        <span>CB</span><span>Visa</span><span>Mastercard</span><span>Apple Pay</span><span>PayPal</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-notif" id="cart-notif">Produit ajouté au panier ✓</div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
